@@ -145,7 +145,7 @@ void gpio_init(void)
     HAL_GPIO_WritePin(nRESET_PIN_PORT, nRESET_PIN, GPIO_PIN_SET);
     GPIO_InitStructure.Pin = nRESET_PIN;
     GPIO_InitStructure.Speed = GPIO_SPEED_FREQ_HIGH;
-    GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_OD;
+    GPIO_InitStructure.Mode = GPIO_MODE_INPUT;
     GPIO_InitStructure.Pull = GPIO_PULLUP; // on STM32F1 it doesn't work in output mode
     HAL_GPIO_Init(nRESET_PIN_PORT, &GPIO_InitStructure);
 
